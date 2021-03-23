@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    html,
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    body {
+      background: #000 url("./Aurio3.jpg") no-repeat center center;
+      background-size: auto 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    div {
+      transition: all .5s;
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+</body>
+<script>
+  var arr = [];
+  var horizon = 10;
+  var vertical = 6;
+  function createEle() {
+    for (var i = 0; i < horizon * vertical; i++) {
+      var el = document.createElement("div");
+      el.onmouseenter = function () {
+        this.style.backgroundColor = "transparent";
+      }
+      arr.push(el);
+      document.body.appendChild(el);
+    }
+  }
+  function setSize() {
+    var w = document.body.clientWidth / horizon;
+    var h = document.body.clientHeight / vertical;
+    arr.forEach(el => {
+      el.style.width = w + "px";
+      el.style.height = h + "px";
+    })
+    return setSize;
+  }
+  createEle();
+  window.onresize = setSize();
+</script>
+
+</html>
