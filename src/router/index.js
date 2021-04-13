@@ -9,7 +9,9 @@ import History from "../components/History.vue";
 import Footer from "../views/Footer.vue";
 import Landing from "../components/Landing.vue";
 import Navbar from "../components/Navbar.vue";
-import Contact from "../views/Contact";
+import Contacts from "../components/Contacts";
+import page from "../components/page.vue";
+import Services from "../components/Services.vue";
 
 Vue.use(VueRouter);
 
@@ -20,14 +22,19 @@ const routes = [
     component: Home
   },
   {
+    path: "/",
+    name: "page",
+    component: page
+  },
+  {
     path: "/Gallery",
     name: "Gallery",
     component: Gallery
   },
   {
-    path: "/Contact",
-    name: "Contact",
-    component: Contact
+    path: "/Contacts",
+    name: "Contacts",
+    component: Contacts
   },
   {
     path: "/History",
@@ -40,7 +47,12 @@ const routes = [
     component: Navbar
   },
   {
-    path: "/",
+    path: "/Services",
+    name: "Services",
+    component: Services
+  },
+  {
+    path: "/Hero",
     name: "Hero",
     component: Hero
   },

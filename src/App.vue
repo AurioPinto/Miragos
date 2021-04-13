@@ -6,7 +6,7 @@
 
     <router-view></router-view>
 
-    <v-footer>
+    <v-footer absolute>
       <Footer />
     </v-footer>
   </v-app>
@@ -14,14 +14,14 @@
 
 <script>
 import Header from "./views//Header";
-import Footer from "./views/Footer";
+// import Footer from "./views/Footer";
 
 export default {
   name: "App",
 
   components: {
     Header,
-    Footer,
+    // Footer,
   },
 
   data: () => ({}),
@@ -34,6 +34,7 @@ body {
   background-color: white;
   max-width: 100%;
   min-height: 100vh;
+  /* height: 100vh; */
 }
 body::-webkit-scrollbar {
   display: none !important;

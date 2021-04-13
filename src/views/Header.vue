@@ -1,21 +1,17 @@
 <template>
   <v-app id="inspire">
     <v-app-bar color="white" app fixed>
-      <v-img
-        max-height="140"
-        max-width="200"
-        src="../assets/Neural.png"
-      ></v-img>
+      <v-img max-width="111" src="../assets/LogoIpaa.png"></v-img>
       <v-spacer></v-spacer>
       <v-app-bar-items class="hidden-xs-only color ml-n9">
         <v-btn text><router-link to="/">Home</router-link></v-btn>
         <v-btn text
-          ><router-link to="/Contact">Services & Solutions</router-link></v-btn
+          ><router-link to="/Services">Services & Solutions</router-link></v-btn
         >
         <v-btn text
-          ><router-link to="/Hero">About NeuralBug</router-link></v-btn
+          ><router-link to="/About">About IppaSolution </router-link></v-btn
         >
-        <v-btn text><router-link to="/Contact">Contact us</router-link></v-btn>
+        <v-btn text><router-link to="/Contacts">Contact us</router-link></v-btn>
       </v-app-bar-items>
       <div class="hidden-sm-and-up">
         <v-menu offset-y>
@@ -30,21 +26,21 @@
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><router-link to="/Hero"
+                ><router-link to="/Services"
                   >Services & Solutions</router-link
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><router-link to="/about"
-                  >About NeuralBug</router-link
-                ></v-list-item-title
+                ><router-link to="/About"
+                  >About IppaSolution
+                </router-link></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><router-link to="/Contact"
+                ><router-link to="/Contacts"
                   >Contact us</router-link
                 ></v-list-item-title
               >
@@ -65,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 body {
-  background-color: white;
+  background-color: #1c223b;
 }
 .color {
   a {

@@ -8,9 +8,9 @@
         reverse-transition="fade-transition"
         transition="fade-transition"
       >
-        <v-container class="title" align="left" justify="left">{{
-          item.title
-        }}</v-container>
+        <v-container class="title" align="left" justify="left"
+          >{{ item.title }}
+        </v-container>
       </v-carousel-item>
     </v-carousel>
     <v-content align="center">
@@ -93,7 +93,7 @@ export default {
   name: "Hero",
   data() {
     return {
-      title: "What are You Designing Today?",
+      title: "Our Solutions",
       icons: [
         "fas fa-code",
         "fab fa-facebook",
@@ -108,11 +108,11 @@ export default {
           // title: "We build Networks Solutions for all your needs",
         },
         {
-          src: require("../assets/userheader.png"),
+          src: require("../assets/value_bg.jpg"),
           title: "We build Network Solutions for all your needs....",
         },
         {
-          src: require("../assets/metro.jpg"),
+          src: require("../assets/layourt.png"),
           title: "We build Network Solutions for all your needs....",
         },
       ],

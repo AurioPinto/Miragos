@@ -1,97 +1,720 @@
 <template>
-  <div class="page">
-    <div class="staticHero">
-      <v-img src="../assets/nio-people.png">
-        <v-row align="end" class="lightbox white--text pa-2 fill-height">
-          <v-col>
-            <v-container>
-              <div class="headline">About Us</div>
-            </v-container>
-          </v-col>
-        </v-row>
-      </v-img>
-    </div>
-    <div class="block">
-      <v-container>
-        <p>
-          Ea pri vitae antiopam theophrastus, ut sit erat putent eruditi. Qui at
-          mutat adversarium. Postulant delicatissimi ei qui, an nonumy dolorem
-          nam. Cu philosophia instructior pri, nec cu mutat homero saperet, cu
-          paulo ridens legendos has. Cu veri oportere pri, ad integre numquam
-          iudicabit mel. Nec ea ferri iudicabit dissentiet. Ex solet melius
-          omittantur his, in gloriatur vulputate mel. Ad nostro repudiandae ius,
-          est amet molestie te. No est modus sensibus volutpat, et putent
-          dissentias has, et sea eirmod vivendum. Paulo lucilius expetenda sea
-          in, cu nam mazim sanctus ponderum. Te nam mundi corpora, dicat dolore
-          debitis ius in. Indoctum adversarium definitionem an pro, an eam vidit
-          utinam detracto.
-        </p>
-      </v-container>
-    </div>
-    <div class="block">
-      <v-container>
-        <h2 class="text-center">Our Teams</h2>
-        <v-row>
-          <v-col
-            v-for="item in items"
-            :key="item.id"
-            class="d-flex child-flex"
-            cols="12"
-            sm="4"
-          >
-            <v-card flat tile class="mx-auto">
-              <v-img
-                :src="item.src"
-                aspect-ratio="1"
-                class="grey lighten-2"
-              ></v-img>
-              <v-card-text class="text--primary text-center">
-                <div class="title">{{ item.name }}</div>
-                <p>{{ item.title }}</p>
-              </v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-    </div>
+  <div>
+    <main>
+      <div class="about">
+        <!-- Head -->
+        <section class="showcase">
+          <div class="container grid">
+            <div class="showcase-text">
+              <h1>Who we are</h1>
+              <p>
+                We are an Export/Import company, founded in 2016. Our founders
+                have years of business experience in the global market, mainly
+                in the US, Mexico, Portugal and Africa.
+              </p>
+              <!-- <a href="features.html" class="btn btn-outline">Read More</a> -->
+            </div>
+
+            <div>
+              <img src="../assets/value_1-removebg-preview.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Sub head -->
+        <section class="features-sub-head bg-light py-3">
+          <div class="container grid">
+            <div class="showcase-text">
+              <img class="ls" src="../assets/LogoIpaa.png" alt="" />
+
+              <!-- <p class="truck">
+                We are a team capable to offer customer-specific needs on every
+                coast of the Atlantic and Pacific Ocean. we are able to offer
+                tailored solutions to our customers worldwide by finding the
+                right products and services made in the US, Canada, Mexico,
+                Europe and Africa.
+              </p> -->
+            </div>
+            <!-- <img class="ls" src="../assets/LogoIpaa.png" alt="" />  -->
+            <p class="truck showcase-text">
+              We are a team capable to offer customer-specific needs on every
+              coast of the Atlantic and Pacific Ocean. we are able to offer
+              tailored solutions to our customers worldwide by finding the right
+              products and services made in the US, Canada, Mexico, Europe and
+              Africa.
+            </p>
+          </div>
+        </section>
+
+        <!-- Cloud -->
+        <section class="cloud showcase my-2 py-2">
+          <div class="container grid">
+            <div class="text-center">
+              <h2 class="lg">Our Values</h2>
+              <p>
+                Our employees are empowered to support the causes that matter to
+                our clients and to the community in which we do business and
+                live.
+              </p>
+              <!-- <a type="button" class="btn btn-outline-warning space">
+                Humble
+              </a>
+              <a type="button" class="btn btn-outline-success space">
+                Empathy
+              </a>
+              <a type="button" class="btn btn-outline-danger space"
+                >Integrity</a
+              >
+              <a type="button" class="btn btn-outline-info space">
+                Creativity and Commitment
+              </a> -->
+            </div>
+            <img src="../assets/night.png" alt="" />
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- <board></board> -->
   </div>
 </template>
 
 <script>
+// import board from "../components/board";
 export default {
   name: "About",
+  components: {
+    // board,
+  },
   data() {
     return {
-      items: [
-        {
-          id: 1,
-          src: require("../assets/images/team1.jpg"),
-          name: "Peter Smith",
-          title: "Director",
-        },
-        {
-          id: 2,
-          src: require("../assets/images/team2.jpg"),
-          name: "Roy Perry",
-          title: "Photographer",
-        },
-        {
-          id: 3,
-          src: require("../assets/images/team3.jpg"),
-          name: "Lisa White",
-          title: "Freelancer",
-        },
-      ],
+      date: new Date().getFullYear(),
+
+      // text: "Aurio",
     };
   },
 };
 </script>
 
-<style lang="scss" scoped>
-.page {
-  margin: auto;
-  max-width: 1440px;
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+/* newpage */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+.kl0 {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.truck {
+  margin-top: 68px;
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px #fff solid;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+/* Backgrounds & colored buttons */
+.bg-primary,
+.btn-primary {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.bg-secondary,
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.bg-dark,
+.btn-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.bg-light,
+.btn-light {
+  background-color: var(--light-color);
+  color: #333;
+}
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
+  color: #fff;
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+/* Text sizes */
+.lead {
+  font-size: 20px;
+}
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Alert */
+.alert {
+  background-color: var(--light-color);
+  padding: 10px 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.alert i {
+  margin-right: 10px;
+}
+
+.alert-success {
+  background-color: var(--success-color);
+  color: #fff;
+}
+
+.alert-error {
+  background-color: var(--error-color);
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 70px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Margin */
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+/* Padding */
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+/* style */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+/* ul {
+  list-style-type: none;
+} */
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.ls {
+  margin-top: 30px;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 8px 0;
+}
+
+p {
+  margin: 15px 0;
+}
+
+img {
   width: 100%;
-  min-height: 100vh;
+}
+
+code,
+pre {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 70px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+/* Showcase */
+.showcase {
+  /* height: 400px; */
+  /* background-color: #2c3e50; */
+  background-color: #1c223b;
+  color: #fff;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase .grid {
+  overflow: visible;
+  grid-template-columns: 55% auto;
+  gap: 30px;
+}
+
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in;
+}
+
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+  animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+
+/* Stats */
+.stats {
+  /* padding-top: 100px; */
+  animation: slideInFromBottom 1s ease-in;
+}
+
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+}
+
+.stats .grid h3 {
+  font-size: 35px;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Cli */
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+/* Cloud */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+/* Languages */
+
+.languages .flex {
+  flex-wrap: wrap;
+}
+
+.languages .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
+}
+
+.languages .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+
+/* Features */
+.features-head img,
+.docs-head img {
+  width: 200px;
+  justify-self: flex-end;
+}
+
+.features-sub-head img {
+  width: 300px;
+  justify-self: flex-end;
+}
+
+.features-main .card > i {
+  margin-right: 20px;
+}
+
+.features-main .grid {
+  padding: 30px;
+}
+
+.features-main .grid > *:first-child {
+  grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(2) {
+  grid-column: 1 / span 2;
+}
+
+/* Docs */
+.docs-main h3 {
+  margin: 20px 0;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav li {
+  font-size: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px #ccc solid;
+}
+
+.docs-main a:hover {
+  font-weight: bold;
+}
+
+/* Footer */
+.footer .social a {
+  margin: 0 10px;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Tablets and under */
+@media (max-width: 768px) {
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid,
+  .features-main .grid,
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto;
+  }
+
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+    animation: slideInFromTop 1s ease-in;
+  }
+
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+    animation: slideInFromBottom 1s ease-in;
+  }
+
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .features-head,
+  .features-sub-head,
+  .docs-head {
+    text-align: center;
+  }
+
+  .features-head img,
+  .features-sub-head img,
+  .docs-head img {
+    justify-self: center;
+  }
+
+  .features-main .grid > *:first-child,
+  .features-main .grid > *:nth-child(2) {
+    grid-column: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+.space {
+  margin: 10px;
+}
+
+.ls {
+  margin-top: 60px;
 }
 </style>
